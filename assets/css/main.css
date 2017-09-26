@@ -3,6 +3,11 @@ header {
   text-align: center;
 }
 
+.logoimg {
+  width: 30px;
+  height: 30px;
+}
+
 header img {
   border: 2px solid green;
   border-radius: 25px;
