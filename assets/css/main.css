@@ -3,11 +3,23 @@ header {
   text-align: center;
 }
 
+header img {
+  border: 2px solid green;
+  border-radius: 25px;
+  padding: 3px;
+  width: 150px;
+  height: 150px;
+  display: block;
+}
+
 nav ul li {
-  display: inline-block;
   padding: 20px;
 }
 
 a:hover {
   color: white;
+}
+
+body {
+  background-color: skyblue;
 }
