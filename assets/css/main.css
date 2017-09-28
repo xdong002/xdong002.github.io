@@ -5,8 +5,7 @@ body {
 
 #pagewrap {
   text-align: center;
-  max-width: 800px;
-  width: 100%;
+  max-width: 1020px;
   margin: 0 auto;
 }
 
@@ -31,13 +30,14 @@ header {
   margin: 20px 10px 5px 10px;
 }
 
-.mywork, .contact {
+.myworkpage, .contactpage {
   display:inline-block;
   margin:10px;
   border: 0px, 10px, 0px, 10px;
   padding: 5px 30px;
   background-color:lightgreen;
   float: right;
+  border-radius: 5px;
 }
 
 a:hover {
@@ -46,7 +46,7 @@ a:hover {
 
 nav {
   height: 50px;
-  background-color: green;
+  background-color: skyblue;
   margin: 10px 0px;
 }
 
@@ -75,4 +75,13 @@ aside {
 footer p {
   background-color: gray;
   height: 200px;
+}
+
+.myWork {
+  background-color: lightyellow;
+  height: 500px;
+  display: inline-block;
+  margin: 10px 10px;
+  width: 320px;
+  float: left;
 }
