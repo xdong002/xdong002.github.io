@@ -72,9 +72,30 @@ aside {
   border-radius: 50px;
 }
 
-footer p {
+footer {
   background-color: gray;
   height: 200px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+.footercontact {
+  display: inline-block;
+  max-width: 5%;
+  max-height: 5%;
+  float: right;
+  margin: 30px 10px;
+}
+
+.footercontactinfo {
+  display: inline-block;
+  max-width: 5%;
+  max-height: 5%;
+  float: right;
+  margin: 30px 30px;
+  font-weight: bold;
 }
 
 .myWork {
