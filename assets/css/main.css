@@ -78,9 +78,22 @@ footer p {
 }
 
 .myWork {
-  background-color: lightyellow;
+  background-color: #97b296;
   height: 500px;
   margin: 10px 10px;
   width: 320px;
   float: left;
+}
+
+#github {
+  margin: 0 auto;
+  padding: 20px;
+  display: inline-block;
+}
+
+#githublogo {
+  padding: 30px;
+  display: inline-block;
+  max-width: 200px;
+  max-height: 100%;
 }
