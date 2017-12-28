@@ -1,56 +1,323 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>First Training</title>
-  <!-- meta -->
-  <meta charset="utf-8" />
-  <meta name="description" content="Personal Site">
-  <meta name="author" content="GA Student">
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-  <!-- mobile -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- styles -->
-  <link rel="stylesheet" type="text/css" href="vendor/css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-  <!-- scripts -->
-  <script type="text/javascript" src="assets/js/app.js"></script>
-  <!-- favicon -->
-  <link rel="icon" type="image/png" href="assets/imgs/favicon.png">
+	<title>Ken's Profile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Designer,Web design" />
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- Custom Theme files -->
+	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+	<!--gallery -->
+	<link type="text/css" rel="stylesheet" href="css/cm-overlay.css" />
+	<!-- //gallery -->
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- font-awesome icons -->
+	<!--//Custom Theme files-->
+	<!-- js -->
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<!-- //js -->
+
 </head>
+
 <body>
-  <div id="pagewrap">
-    <header>
-      <a href="index.html">
-        <img class="meimg"src="assets/imgs/logo.jpg">
-      </a>
-      <h1>Ken's Personal Page!</h1>
-      <nav>
-        <ul>
-          <li><a href="https://generalassemb.ly/">
-            <img class="logoimg" src="assets/imgs/favicon.png"></a></li>
-          <li><a href="mywork.html" class="myworkpage">My work</a></li>
-          <li><a href="#justforcontact" class="contactpage">Contact me</a></li>
-        </ul>
-      </nav>
-    </header>
+	<!-- banner -->
+	<div id="home" class="banner">
+		<div class="banner-agileinfo">
+			<!-- header -->
+			<div class="header">
+				<div class="container">
+					<div class="menu">
+						<a href="" id="menuToggle"> <span class="navClosed"></span> </a>
+						<nav>
+							<a href="#home" class="active scroll">Home</a>
+							<a href="#about" class="scroll">About Me</a>
+							<a href="#skills" class="scroll">Skills</a>
+							<a href="#gallery" class="scroll">My Work</a>
+							<a href="#contact" class="scroll">Contact</a>
+						</nav>
+						<script>
+							(function ($) {
+								// Menu Functions
+								$(document).ready(function () {
+									$('#menuToggle').click(function (e) {
+										var $parent = $(this).parent('.menu');
+										$parent.toggleClass("open");
+										var navState = $parent.hasClass('open') ? "hide" : "show";
+										$(this).attr("title", navState + " navigation");
+										// Set the timeout to the animation length in the CSS.
+										setTimeout(function () {
+											console.log("timeout set");
+											$('#menuToggle > span').toggleClass("navClosed").toggleClass("navOpen");
+										}, 200);
+										e.preventDefault();
+									});
+								});
+							})(jQuery);
+						</script>
 
-    <section>
-      <p>This is the main content</p>
-    </section>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<!-- //header -->
+			<div class="banner-text">
+				<div class="container">
+					<h1><a href="index.html">Ken Dong</a></h1>
+					<h2 class="w3ls-bnrtext">I am <span> WEB </span> Developer</h2>
+					<p class="w3ls-p">an interactive web designer with the passion for creativity</p>
+					<a href="#about" class="buy btn-wayra scroll">Explore my work</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+	<!-- about -->
+	<div class="agile-about w3ls-section text-center" id="about">
+		<div class="container">
+			<h3 class="agileits-title">about me</h3>
+			<div class="agileits-about-grid">
+				<p>I'm very passionate about Web Development, always eager to learn new
+					skills and improve on it. My goal is to use the right technology to make things better, faster and easier.
+				 I learn by doing, and do my best work in small to medium team settings.</p>
+			</div>
+			<a href="#contact" class="wthree- about-link scroll">hire me</a>
+		</div>
+	</div>
+	<!-- //about -->
+	<!-- about-bottom -->
+	<div class="agileits-about-btm">
+		<div class="container">
+			<div class="w3-flex">
+			<div class="col-md-4 col-sm-4 ab1 agileits-about-grid1">
+				<span class="fa fa-graduation-cap  wthree-title-list" aria-hidden="true"></span>
+				<h4 class="agileinfo-head">education</h4>
+				<h5>B.S. Information Technology</h5>
+				<p>SUNY Plattsburgh 2012-2016</p>
+				<h5>Web Development Immersive</h5>
+				<p>General Assembly 2017</p>
+			</div>
+			<div class="col-md-4 col-sm-4 ab1 agileits-about-grid2">
+				<span class="fa fa-shield  wthree-title-list" aria-hidden="true"></span>
+				<h4 class="agileinfo-head">expertise</h4>
+				<h5>Front-end Development</h5>
+				<p>2015-Present</p>
+				<h5>Back-end Development</h5>
+				<p>2017-Present</p>
+				<h5>Web Design</h5>
+				<p>2015-Present</p>
+			</div>
+			<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- //about-bottom -->
+	<!-- skills -->
+	<div class="agile-service w3ls-section" id="skills">
+		<div class="container">
+			<div class="col-md-5 w3_agileits-service-left">
+				<h3 class="agileits-title">skills</h3>
+				<p>I have a wide range of skill sets from the base HTML and CSS to Ruby,
+					Rails, Python, React, Angular and many more.
+				</p>
+			</div>
+			<div class="col-md-7 skills-right">
+				<div class="vertical-skills  pull-right xs-center">
+					<ul class="list-inline">
+						<li>
+							<div class="skill" style="height:100%; background:#ff9d0d;"><span class="value"></span></div><span class="title">ROR</span></li>
+						<li>
+							<div class="skill" style="height:90%; background:#03a9f4;"><span class="value"></span></div><span class="title">Python</span></li>
+						<li>
+							<div class="skill" style="height:80%; background:#b32eca;"><span class="value"></span></div><span class="title">React</span></li>
+						<li>
+							<div class="skill" style="height:75%; background:#009688;"><span class="value"></span></div><span class="title">Angular</span></li>
+						<li>
+							<div class="skill" style="height:85%; background:#6361f0;"><span class="value"></span></div><span class="title">JS</span></li>
 
-    <aside>
-      <p>This is the side</p>
-    </aside>
+					</ul>
+				</div>
 
-    <div style="clear: both;"></div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="w3ls-section agileits-gallery" id="gallery">
+		<div class="container">
+			<h3 class="agileits-title">MY work</h3>
+			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+				<div id="myTabContent" class="tab-content">
+					<div role="tabpanel" class="tab-pane fade in active" id="home-main" aria-labelledby="home-tab">
+						<div class="w3_tab_img">
+							<div class="col-sm-3 w3_tab_img_left">
+								<div class="demo">
+									<a class="cm-overlay" href="images/g1.jpg">
+										<figure class="imghvr-shutter-in-out-diag-2"><img src="images/g1.jpg" alt=" " class="img-responsive" />
+										</figure>
+									</a>
+								</div>
+								<div class="agile-gallery-info">
+									<h5>ESports Club</h5>
+									<p>A Steam game, I work as a designer</p>
+								</div>
+							</div>
+							<div class="col-sm-3 w3_tab_img_left">
+								<div class="demo">
+									<a class="cm-overlay" href="images/g2.png">
+										<figure class="imghvr-shutter-in-out-diag-2"><img src="images/g2.png" alt=" " class="img-responsive" />
+										</figure>
+									</a>
+								</div>
+								<div class="agile-gallery-info">
+									<h5>G.A Forum</h5>
+									<p>A forum for General Assembly, build it completely on my own, Front-end to Back-end.</p>
+								</div>
+							</div>
+							<div class="col-sm-3 w3_tab_img_left">
+								<div class="demo">
+									<a class="cm-overlay" href="images/g3.png">
+										<figure class="imghvr-shutter-in-out-diag-2"><img src="images/g3.png" alt=" " class="img-responsive" />
+										</figure>
+									</a>
+								</div>
+								<div class="agile-gallery-info">
+									<h5>Trimdat</h5>
+									<p>A website for people to edit and share files. I wrok mostly on the Front-end.</p>
+								</div>
+							</div>
+							<div class="col-sm-3 w3_tab_img_left">
+								<div class="demo">
+									<a class="cm-overlay" href="images/upcoming_projects.jpg">
+										<figure class="imghvr-shutter-in-out-diag-2"><img src="images/upcoming_projects.jpg" alt=" " class="img-responsive" />
+										</figure>
+									</a>
+								</div>
+								<div class="agile-gallery-info">
+									<p>Project in progress.</p>
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery.tools.min.js"></script>
+		<script src="js/jquery.mobile.custom.min.js"></script>
+		<script src="js/jquery.cm-overlay.js"></script>
+		<script>
+			$(document).ready(function () {
+				$('.cm-overlay').cmOverlay();
+			});
+		</script>
+	</div>
+	<!-- //menu -->
 
-    <footer>
-      <ul>
-        <li><a href="https://github.com/xdong002"><img class="footercontact" src="assets/imgs/footergithub.png" title="GitHub"></a></li>
-        <li><a href="mailto:xxx419168445@gmail.com"><img class="footercontact" src="assets/imgs/footeremail.png" title="E-mail"></a></li>
-        <li class="footercontactinfo" id="justforcontact">Contact Info:</li>
-      </ul>
-    </footer>
-  </div>
+	<!-- contact -->
+	<h3 class="contact-me" id="contact">Feel free to contact me</h3>
+	<div class="contact-w3-agileits w3ls-section">
+		<div class="container">
+			<div class="contact-main-w3ls">
+				<div class="col-md-6  contact-left-w3ls">
+					<div class="mail contact-grid-agileinfo">
+						<div class="col-md-4 col-sm-4 col-xs-4 contact-icon-wthree">
+							<h4>Mail me</h4>
+						</div>
+						<div class="col-md-8  col-sm-8 col-xs-8 contact-text-agileinfo">
+							<a target="_blank" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=xdong0022@gmail.com">xdong0022@gmail.com</a><br>
+							<a target="_blank" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=xxx419168445@gmail.com">xxx419168445@gmail.com</a>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="call contact-grid-agileinfo">
+						<div class="col-md-4 col-sm-4 col-xs-4 contact-icon-wthree">
+							<h4>Phone</h4>
+						</div>
+						<div class="col-md-8 col-sm-8 col-xs-8 contact-text-agileinfo">
+							<p>(347)-513-5367</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="contact-grid-agileinfo">
+						<div class="col-md-4 col-sm-4 col-xs-4 contact-icon-wthree">
+							<h4>Address</h4>
+						</div>
+						<div class="col-md-8 col-sm-8 col-xs-8 contact-text-agileinfo">
+							<p>1730 O'Farrell St Apt PH1C,<br> San Francisco, CA 94115,<br> USA.
+							</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="visit wthree-social-icons contact-grid-agileinfo">
+						<div class="col-md-4 col-sm-4 col-xs-4 contact-icon-wthree">
+							<h4>Follow me</h4>
+						</div>
+						<div class="col-md-8 col-sm-8 col-xs-8 contact-text-agileinfo">
+							<ul class="w3-links">
+								<li><a target="_blank" href="https://www.facebook.com/xiaocan.dong" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+								<li><a target="_blank" href="https://www.linkedin.com/in/xdong0022/" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+								<li><a target="_blank" href="https://github.com/xdong002" title="Github"><i class="fa fa-github"></i></a></li>
+							</ul>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="contact-main">
+					<div class="col-md-6 agileits-main-right">
+
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //contact -->
+	<div class="agileits_w3layouts-footer">
+		<p>© 2017 | Ken</a></p>
+	</div>
+	<!-- start-smooth-scrolling -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
+	<!-- smooth-scrolling-of-move-up -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+			};
+			*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+<script type="text/javascript" src="js/SmoothScroll.min.js"></script>
+	<script src="js/bootstrap.js"></script>
 </body>
 </html>
